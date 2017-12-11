@@ -11,6 +11,124 @@
 <div class="jumbotron text-center">
   MA APP
 </div>
+  <div id="video283667172[CB]" style="width: 300px; height: 250px;">
+    <script src="https://p.algovid.com/player/player.js?p=283667172&sid=[APP_BUNDLE]&cb=[CB]&appn=[APP_NAME]&appv=[APP_VER]&appb=[APP_BUNDLE]&appsu=[APP_STORE_URL]&appidfa=[APP_IDFA]&appaid=[APP_AID]&appsi=[APP_STORE_ID]&appc=[APP_CATEGORY]&country=[COUNTRY_ID]&loc=[LOCATION]&loclong=[LOCATION_LONG]&loclat=[LOCATION_LAT]&deviceid=[DEVICEID]&w=300&h=250&d=[APP_BUNDLE]"
+            type="text/javascript"></script>
+  </div>
+  <div>
+    <script type="text/javascript">
+        (function()
+        {
+            var lkqdSettings = {
+                pid: 198,
+                sid: 584752,
+                playerContainerId: 'ad' + Math.round(Math.random()*1000000000).toString(),
+                playerId: '',
+                playerWidth: 300,
+                playerHeight: 250,
+                execution: 'inbanner',
+                placement: '',
+                passbackFirst: false,
+                playInitiation: 'auto',
+                volume: 0,
+                appName: '',
+                appVersion: '',
+                bundleId: '',
+                appStoreUrl: '',
+                aid: '',
+                idfa: '',
+                geoLatitude: '',
+                geoLongitude: '',
+                geoLocation: '',
+                trackImp: '',
+                trackClick: '',
+                custom1: '',
+                custom2: '',
+                custom3: '',
+                pubMacros: '',
+                dfp: false,
+                lkqdId: new Date().getTime().toString() + Math.round(Math.random()*1000000000).toString(),
+                supplyContentVideo: {
+                    url: '', clickurl: '', play: 'pre'}};
+            var lkqdVPAID;
+            var creativeData = '';
+            if (!document.getElementById(lkqdSettings.playerContainerId)) { try { if (document.readyState && document.readyState != 'complete' && document.readyState != 'interactive'){ document.write("<div id=" + lkqdSettings.playerContainerId + "></div>"); }} catch (e) {}}
+                var environmentVars = { slot: document.getElementById(lkqdSettings.playerContainerId), videoSlot: document.getElementById(lkqdSettings.playerId), videoSlotCanAutoPlay: true, lkqdSettings: lkqdSettings };
+                function onVPAIDLoad()
+                {
+                    lkqdVPAID.subscribe(function() { lkqdVPAID.startAd(); }, 'AdLoaded');
+                }
+                var vpaidFrame = document.createElement('iframe');
+                vpaidFrame.id = lkqdSettings.lkqdId;
+                vpaidFrame.name = lkqdSettings.lkqdId;
+                vpaidFrame.style.display = 'none';
+                var vpaidFrameLoaded = function() {
+                    vpaidFrame.contentWindow.addEventListener('lkqdFormatsLoad', function() {
+                        lkqdVPAID = vpaidFrame.contentWindow.getVPAIDAd();
+                        onVPAIDLoad();
+                        lkqdVPAID.handshakeVersion('2.0');
+                        lkqdVPAID.initAd(lkqdSettings.playerWidth, lkqdSettings.playerHeight, 'normal', 600, creativeData, environmentVars);
+                    });
+                    vpaidLoader = vpaidFrame.contentWindow.document.createElement('script');
+                    vpaidLoader.setAttribute('async','async');
+                    vpaidLoader.src = 'https://ad.lkqd.net/vpaid/formats.js?pid=198&sid=584752';
+                    vpaidFrame.contentWindow.document.body.appendChild(vpaidLoader);
+                };
+                vpaidFrame.onload = vpaidFrameLoaded;
+                vpaidFrame.onerror = vpaidFrameLoaded;
+                document.documentElement.appendChild(vpaidFrame);
+            })();
+    </script>
+  </div>
+  <div id="aniplayer"></div>
+  <script type="text/javascript" id="aniviewJS">
+      (function()
+      {
+          var myPlayer;
+          var adConfig = {
+              publisherId : '5649e751181f46271d8b4569',
+              channelId : '5a293a2a073ef40e1e22dff0',
+              ref1 : '',
+              width : 300,
+              height : 250,
+              HD : true,
+              autoPlay : false,
+              loop : false,
+              mode : 0,
+              vastRetry : 1,
+              errorLimit : 10,
+              soundButton : true,
+              pauseButton : true,
+              closeButton : false,
+              preloader :{
+                  type: '',
+                  link : '',
+                  clickthrough :'',
+                  poster:''
+              },
+              position : 'aniplayer'
+          };
+
+          (new Image).src = "https://track1.aniview.com/track?pid="+adConfig.publisherId+"&cid="+adConfig.channelId+"&e=playerLoaded"+"&cb="+Date.now();
+          var PlayerUrl = 'https://player.aniview.com/script/6.1/aniview.js';
+          function downloadScript(src,adData) {
+              var scp = document.createElement('script');
+              scp.src = src;
+              scp.onload = function() {
+                  myPlayer= new avPlayer(adData);
+                  myPlayer.onPlay = function(type) {
+                  };
+                  myPlayer.onClick = function(type) {
+                  };
+                  myPlayer.onError = function(type) {
+                  };
+                  myPlayer.play(adConfig);
+              }
+              document.getElementsByTagName('head')[0].appendChild(scp);
+          };
+          downloadScript(PlayerUrl,adConfig);
+      })();
+  </script>
 
 </body>
 </html>
